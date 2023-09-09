@@ -201,10 +201,52 @@ a {
     border: solid 1px var(--pink-white);
 }
 
+.chart .title {
+    color: var(--black, #212427);
+    text-align: left;
+    font-family: 'Inter';
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-left: 10px;
+}
+
 canvas {
     border-radius: 15px;
 }
 
+/* Dashboard - last sales */
+.sales {
+    margin-top: 20px;
+}
+
+.sales table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sales th,
+.sales td {
+    padding: 8px;
+    text-align: left;
+}
+
+.sales td {
+    border-bottom: 1px solid var(--seccond);
+}
+
+.sales th {
+    color: var(--main);
+}
+
+.options-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--black);
+}
 
 @media (max-width: 768px) {
 
