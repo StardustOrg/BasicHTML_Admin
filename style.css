@@ -20,7 +20,7 @@ body {
     background-color: var(--white);
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -128,6 +128,12 @@ a{
     font-size: 20px;
     color: var(--grey);
     font-weight: 300;
+}
+
+/* Dashboard - highlights */
+.highlights {
+    display: flex;
+    flex-direction: column;
 }
 
 
