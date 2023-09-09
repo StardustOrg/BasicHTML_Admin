@@ -18,9 +18,10 @@ body {
     margin: 0;
     height: 100vh;
     background-color: var(--white);
+    color: var(--black);
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -115,19 +116,93 @@ a{
     padding: 10px 35px;
 }
 
+/* Message */
 .message h1 {
     margin: 0;
     margin-top: 15px;
-    font-size: 40px;
+    font-size: 35px;
     color: var(--black);
     font-weight: 700;
 }
 
 .message p {
     margin-top: 5px;
-    font-size: 20px;
+    font-size: 18px;
     color: var(--grey);
     font-weight: 300;
+}
+
+/* Dashboard - highlights */
+.highlights {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.highlight {
+    flex: 1;
+    padding: 0px 32px;
+    border-radius: 15px;
+}
+
+.billing {
+    background-color: var(--pink-white);
+}
+
+.trending-photocard {
+    background-color: var(--blue-white);
+}
+
+.trending-artist {
+    background-color: var(--purple-white);
+}
+
+.highlight h4 {
+    margin-bottom: 0;
+    color: var(--black, #212427);
+    font-family: 'Inter';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.highlight h5 {
+    margin-top: 7px;
+    color: var(--black, #212427);
+    font-family: 'Inter';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 216px;
+}
+
+/* Dashboard - Charts */
+.charts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 28px;
+}
+
+.chart {
+    margin: 0;
+    height: 285px;
+    border-radius: 15px;
+    border: solid 1px var(--pink-white);
+}
+
+canvas {
+    border-radius: 15px;
 }
 
 
