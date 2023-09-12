@@ -137,14 +137,16 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 25px;
+    align-items: center;
     margin-top: 30px;
+    gap: 28px;
 }
 
 .highlight {
     flex: 1;
     padding: 0px 32px;
     border-radius: 15px;
+    min-height: 100px;
 }
 
 .billing {
@@ -228,7 +230,7 @@ canvas {
 
 .sales th,
 .sales td {
-    padding: 8px;
+    padding: 10px;
     text-align: left;
 }
 
@@ -240,6 +242,7 @@ canvas {
     color: var(--main);
 }
 
+
 .options-btn {
     background: none;
     border: none;
@@ -247,6 +250,40 @@ canvas {
     cursor: pointer;
     color: var(--black);
 }
+
+/* Sellings - highlights */
+.sellings-higlight {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--detail);
+    border-radius: 15px;
+    justify-content: space-around;
+}
+
+.pipe-divisor {
+    display: block;
+    border-left: 1px solid var(--white);
+    height: 50px;
+    z-index: 1;
+}
+
+.sellings-higlight h4,
+.sellings-higlight h5 {
+    color: var(--white);
+}
+
+/* Sellings - order by */
+.order-select {
+    margin-top: 32px;
+    margin-bottom: 10px;
+    background: none;
+    color: var(--main);
+    border: none;
+    font-size: inherit;
+}
+
 
 @media (max-width: 768px) {
 
