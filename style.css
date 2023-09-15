@@ -257,21 +257,21 @@ canvas {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--detail);
+    background-color: var(--blue-white);
     border-radius: 15px;
     justify-content: space-around;
 }
 
 .pipe-divisor {
     display: block;
-    border-left: 1px solid var(--white);
+    border-left: 1px solid var(--grey);
     height: 50px;
     z-index: 1;
 }
 
 .sellings-higlight h4,
 .sellings-higlight h5 {
-    color: var(--white);
+    color: var(--black);
 }
 
 /* Sellings - order by */
@@ -322,28 +322,34 @@ canvas {
 
 /* Search bar*/
 
-.search-bar{
+.search-bar {
     width: 100%;
     height: 30px;
     border-radius: 10px;
     padding: 10px;
     border: #E1B4F4 solid 2px;
     font-size: 16px;
-
+    margin-bottom: 32px;
 }
 
-.search-bar:focus, .search-bar::placeholder{
+.search-bar:focus,
+.search-bar::placeholder {
     border-color: #E1B4F4;
     color: #E1B4F4
+}
 
+.photocards-row {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
 }
 
 /*filters*/
-.filters{
-    margin-top: 32px;
-    margin-right: 50px;
+.photocards-row .filters {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
     width: 160px;
-    float: left;
 }
 
 .dropbtn {
@@ -356,72 +362,74 @@ canvas {
     border: none;
     cursor: pointer;
     border-radius: 15px;
-    margin-bottom: 20px;
+}
 
-  }
-  
-  .dropbtn:hover, .dropbtn:focus {
+.dropbtn:hover,
+.dropbtn:focus {
     background-color: #E1B4F4;
-  }
+}
 
-  /*photocards*/
-  
-  .photocards{
-    overflow: hidden;
-    margin-top: 32px;
-  }
- 
+/*photocards*/
+.photocards-row .photocards {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 37px;
+}
 
-.section-products .single-product {
+
+.single-product {
     margin-bottom: 26px;
     width: 155px;
     height: 296px;
-    
+
 }
 
-.section-products .single-product .part-1 {
+.single-product .part-1 {
     position: relative;
     height: 232px;
     max-height: 232px;
     overflow: hidden;
     border-radius: 10px;
 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: space-between; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.section-products .single-product .part-1 .photocard-img {
+.single-product .part-1 .photocard-img {
     width: 100%;
     height: auto;
     z-index: 0;
 }
 
-.section-products .single-product .part-1 .photocard-img::before {
-		position: absolute;
-		content: "";
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		transition: all 0.3s;
-        
+.single-product .part-1 .photocard-img::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.3s;
+
 }
 
 
-.section-products .single-product .part-1 .edit {
+.single-product .part-1 .edit {
     position: absolute;
     float: right;
     margin-top: 10px;
-	margin-right: 10px;
+    margin-right: 10px;
     opacity: 0;
     transition: bottom 0.5s, opacity 0.5s;
-	width: 50px;
+    width: 50px;
     height: 20px;
-	display: inline-block;
+    display: inline-block;
 
-    
+
     text-align: center;
     transition: color 0.2s;
     font-size: 12px;
@@ -430,16 +438,16 @@ canvas {
     color: #FDFDFD;
     border: #FDFDFD solid 1px;
     border-radius: 6px;
-    z-index: 1; 
+    z-index: 1;
 
-    align-self: flex-end; 
+    align-self: flex-end;
 }
 
-.section-products .single-product:hover .part-1 .edit {
+.single-product:hover .part-1 .edit {
     opacity: 1;
 }
 
-.section-products .single-product .part-1 .edit:hover {
+.single-product .part-1 .edit:hover {
     color: #FDFDFD;
     background-color: #6622CC;
     border: #6622CC solid 1px;
@@ -447,13 +455,13 @@ canvas {
 }
 
 
-.section-products .single-product .part-2 .product-title {
+.single-product .part-2 .product-title {
     font-size: 14px;
     font-weight: 400;
-    
+
 }
 
-.section-products .single-product .part-2 h5 {
+.single-product .part-2 h5 {
     font-size: 12px;
     font-weight: 400;
     float: left;
@@ -465,9 +473,9 @@ canvas {
 
 }
 
-.section-products .single-product .part-2 .product-add-more{
-	float: right;
-    font-size:12px;
+.single-product .part-2 .product-add-more {
+    float: right;
+    font-size: 12px;
     padding: 5px;
 
 
@@ -477,34 +485,34 @@ canvas {
     border-radius: 6px;
 }
 
-.section-products .single-product .part-2 .product-add-more:hover {
+.single-product .part-2 .product-add-more:hover {
     color: #FDFDFD;
     background-color: #6622CC;
     border: #6622CC solid 1px;
 
 }
 
-.part-2-2{
+.part-2-2 {
     justify-content: space-between;
     align-items: center;
 }
 
 
-    
+
 
 /*artist*/
 
-.artist{
+.artist {
     overflow: hidden;
     margin-top: 32px;
-  }
- 
+}
+
 
 .section-artist .single-artist {
     margin-bottom: 26px;
     width: 155px;
     height: 155px;
-    
+
 }
 
 .section-artist .single-artist .part-1 {
@@ -513,9 +521,9 @@ canvas {
     max-height: 155px;
     overflow: hidden;
     border-radius: 10px;
-    display: flex; 
-    flex-direction: column; 
-    justify-content: space-between; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .section-artist .single-artist .part-1 .artist-img {
@@ -525,15 +533,15 @@ canvas {
 }
 
 .section-artist .single-artist .part-1 .artist-img::before {
-		position: absolute;
-		content: "";
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		transition: all 0.3s;
-        
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.3s;
+
 }
 
 
@@ -541,14 +549,14 @@ canvas {
     position: absolute;
     float: right;
     margin-top: 10px;
-	margin-right: 10px;
+    margin-right: 10px;
     opacity: 0;
     transition: bottom 0.5s, opacity 0.5s;
-	width: 50px;
+    width: 50px;
     height: 20px;
-	display: inline-block;
+    display: inline-block;
 
-    
+
     text-align: center;
     transition: color 0.2s;
     font-size: 12px;
@@ -557,9 +565,9 @@ canvas {
     color: #FDFDFD;
     border: #FDFDFD solid 1px;
     border-radius: 6px;
-    z-index: 1; 
+    z-index: 1;
 
-    align-self: flex-end; 
+    align-self: flex-end;
 }
 
 .section-artist .single-artist:hover .part-1 .edit {
