@@ -338,17 +338,24 @@ canvas {
     color: #E1B4F4
 }
 
-.photocards-row {
+.photocards-row,
+.artists-row {
     display: flex;
     flex-direction: row;
+    margin-right: -20px;
     gap: 50px;
 }
 
 /*filters*/
-.photocards-row .filters {
+.photocards-row .filters,
+.artists-row .filters {
     display: flex;
     flex-direction: column;
     gap: 23px;
+    width: 160px;
+}
+
+.artists-row .filters {
     width: 160px;
 }
 
@@ -357,7 +364,7 @@ canvas {
     color: #FDFDFD;
     padding-top: 12px;
     padding-bottom: 12px;
-    width: 100%;
+    width: 160px;
     font-size: 14px;
     border: none;
     cursor: pointer;
@@ -370,13 +377,13 @@ canvas {
 }
 
 /*photocards*/
-.photocards-row .photocards {
+.photocards-row .photocards,
+.artists-row .artists {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
-    align-items: flex-start;
-    align-content: flex-start;
-    gap: 37px;
+    justify-content: space-between;
+    align-content: normal;
+    gap: 40px;
 }
 
 
@@ -501,24 +508,13 @@ canvas {
 
 
 /*artist*/
-
-.artist {
-    overflow: hidden;
-    margin-top: 32px;
-}
-
-
-.section-artist .single-artist {
-    margin-bottom: 26px;
+.artists-row .single-artist {
     width: 155px;
-    height: 155px;
-
 }
 
-.section-artist .single-artist .part-1 {
+.artists-row .single-artist .part-1 {
     position: relative;
     height: 155px;
-    max-height: 155px;
     overflow: hidden;
     border-radius: 10px;
     display: flex;
@@ -526,13 +522,13 @@ canvas {
     justify-content: space-between;
 }
 
-.section-artist .single-artist .part-1 .artist-img {
+.artists-row .single-artist .part-1 .artist-img {
     width: 100%;
     height: auto;
     z-index: 0;
 }
 
-.section-artist .single-artist .part-1 .artist-img::before {
+.artists-row .single-artist .part-1 .artist-img::before {
     position: absolute;
     content: "";
     top: 0;
@@ -545,7 +541,7 @@ canvas {
 }
 
 
-.section-artist .single-artist .part-1 .edit {
+.artists-row .single-artist .part-1 .edit {
     position: absolute;
     float: right;
     margin-top: 10px;
@@ -570,11 +566,11 @@ canvas {
     align-self: flex-end;
 }
 
-.section-artist .single-artist:hover .part-1 .edit {
+.artists-row .single-artist:hover .part-1 .edit {
     opacity: 1;
 }
 
-.section-artist .single-artist .part-1 .edit:hover {
+.artists-row .single-artist .part-1 .edit:hover {
     color: #FDFDFD;
     background-color: #6622CC;
     border: #6622CC solid 1px;
