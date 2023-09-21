@@ -113,3 +113,7 @@ function filterFunction() {
     }
   }
 }
+
+/**
+ * Box Shadow for input image
+ */
